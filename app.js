@@ -5,6 +5,7 @@ var swig = require('swig');
 var logger = require('morgan')('dev');
 var bodyParser = require('body-parser');
 var path = require('path');
+var sass = require('node-sass-middleware');
 
 // routes
 var routes = require('./routes/index');
@@ -23,6 +24,13 @@ app.set('view engine', 'html');
 app.use(logger);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(
+  sass({
+    src: __dirname + '/assets', //where the sass files are 
+    dest: __dirname + '/public', //where css should go
+    debug: true
+  })
+);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 

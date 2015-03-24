@@ -4,11 +4,10 @@ var path = require('path');
 
 router.get('/', function (req, res, next) {
   
-  if (err) return next(err);
+  //if (err) return next(err);
 
   // render a view with a map and some UI interface
-  // 
-  res.sendFile(path.join(__dirname, '../views/index.html');
+  res.sendFile(path.join(__dirname, '../public/views/index.html'));
 });
 
 // basic error handling

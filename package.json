@@ -1,0 +1,27 @@
+{
+  "name": "trip-planner",
+  "version": "1.0.0",
+  "description": "Trip planner for trip planning!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ashryanbeats/trip-planner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashryanbeats/trip-planner/issues"
+  },
+  "homepage": "https://github.com/ashryanbeats/trip-planner",
+  "dependencies": {
+    "body-parser": "^1.12.2",
+    "express": "^4.12.3",
+    "mongoose": "^3.8.25",
+    "morgan": "^1.5.2",
+    "path": "^0.11.14",
+    "swig": "^1.4.2"
+  }
+}

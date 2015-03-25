@@ -13,7 +13,6 @@ router.get('/', function (req, res, next) {
           all_restaurants: restaurants,
           all_things_to_do: thingstodo
         });
-        console.log(hotels[0]);
   	  });
   	});
   });

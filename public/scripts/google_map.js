@@ -65,8 +65,6 @@ function initialize_gmaps() {
     var pin = {
         url: "icons/maps.png",
         scaledSize: new google.maps.Size(40, 50),
-        //origin: new google.maps.Point(0, 0),
-        //anchor: new google.maps.Point(0, 0)
     };
 
     // initialize new google maps LatLng object
@@ -76,7 +74,13 @@ function initialize_gmaps() {
         center: myLatlng,
         zoom: 16,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        styles: styles
+        styles: styles,
+        draggable: false,
+        scrollwheel: false,
+        mapTypeControl: false,
+        panControl: false,
+        zoomControl: false,
+        streetViewControl: false
     };
     // get the maps div's HTML obj
     var map_canvas_obj = document.getElementById("map");

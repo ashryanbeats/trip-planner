@@ -89,11 +89,25 @@ function initialize_gmaps() {
     // Add the marker to the map
     var marker = new google.maps.Marker({
         position: myLatlng,
-        title:"Hello World!",
+        title: "Hello World!",
         icon: pin
     });
+
+    // info window markup
+    var infoWindowString = '<div>Hello World!</div>';
+
+    var infowindow = new google.maps.InfoWindow({
+      content: infoWindowString
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map, marker);
+    });
+
+
     // Add the marker to the map by calling setMap()
     marker.setMap(map);
+
 }
 
 $(document).ready(function() {

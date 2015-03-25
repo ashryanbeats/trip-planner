@@ -15,11 +15,11 @@
 	<div class="col-md-9" id="map">
 	</div>
 
-
 	<div class="col-md-3">
-		<!-- hotel section -->
-		<div id="hotels">
-			<h2>Hotels</h2>
+		<!-- selection section -->
+		<div class="panel panel-default" id="selections">
+			<div class="panel-body">
+				<h2>Hotels</h2>
 				<select>
 					{% for hotel in all_hotels %}
 					  <option value="{{ hotel.name }}">{{ hotel.name }}</option>
@@ -40,29 +40,33 @@
 					{% endfor %}
 				</select>
 				<button type="button" class="btn btn-danger">x</button>
-		</div>
+			</div>  <!-- closes panel body -->
+		</div>  <!-- closes class=panel-default id=hotels -->
 
 			<!-- day planner section -->
-		<div id="day-planner">
-			<h2>Day</h2>
-			<button type="button" class="btn btn-primary">1</button>
-			<button type="button" class="btn btn-primary">2</button>
-			<button type="button" class="btn btn-primary">3</button>
-			<button type="button" class="btn btn-primary">+</button>
-
-			<h3>My Hotel</h3>
-			<ul>
-				<li>Hotel <button type="button" class="btn btn-danger">x</button></li>
-			</ul>
-			<h3>My Restaurants</h3>
-			<ul>
-				<li>Restaurants <button type="button" class="btn btn-danger">x</button></li>
-			</ul>
-			<h3>My Things To Do</h3>
-			<ul>
-				<li>Todos <button type="button" class="btn btn-danger">x</button></li>
-			</ul>
-		</div>	
+		<div class="panel panel-default" id="day-planner">
+			<div class="panel-heading">
+ 				<h2 class="panel-title">Itinerary</h2>
+ 				<button type="button" class="btn btn-primary">1</button>
+				<button type="button" class="btn btn-primary">2</button>
+				<button type="button" class="btn btn-primary">3</button>
+				<button type="button" class="btn btn-primary">+</button>
+ 			</div>
+ 			<div class="panel-body">
+				<h3>My Hotel</h3>
+				<ul>
+					<li>Hotel <button type="button" class="btn btn-danger">x</button></li>
+				</ul>
+				<h3>My Restaurants</h3>
+				<ul>
+					<li>Restaurants <button type="button" class="btn btn-danger">x</button></li>
+				</ul>
+				<h3>My Things To Do</h3>
+				<ul>
+					<li>Todos <button type="button" class="btn btn-danger">x</button></li>
+				</ul>
+			</div> <!-- closes panel body -->
+		</div>	<!-- closes panel=panel-default id=day-planner -->
 	</div> <!-- closes column -->
 </div> <!-- closes row -->
 

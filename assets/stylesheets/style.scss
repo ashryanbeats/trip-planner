@@ -11,7 +11,7 @@ body {
 	width: 100%;
 }
 
-.col-md-9 {
+.col-sm-9 {
 	height: 100%;
 }
 
@@ -24,5 +24,24 @@ body {
 }
 
 .panel-body {
-	padding-top: 0px;
+	padding-top: 0px ;
+
+	ul {
+		padding-left: 17px;
+	}
 }
+
+.btn-danger {
+	float: right;
+	padding: 0 6px 0 6px;
+}
+
+select {
+	width: 89%;
+}
+
+h3 {
+	font-size: 15px;
+}
+
+

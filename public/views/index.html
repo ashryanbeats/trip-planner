@@ -1,11 +1,74 @@
-<!-- this is an index view for the browser -->
-<!doctype html>
-<head>
-<link href='/stylesheets/style.css' rel="stylesheet">
-<script src='/jquery/dist/jquery.js'></script>
-</head>
-<body>
-<h1>Trip Planner Hell</h1>	
+{% extends "layout.html" %}
+
+{% block content %}
+
+<nav class="navbar navbar-inverse navbar-static-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a href="#" class="navbar-brand">Trip Planner Hell!</a>
+		</div>
+	</div>
+</nav>
+
+<div class="row">
+	<!-- map -->
+	<div class="col-md-9">
+		<p>[[maps]]</p>
+	</div>
+
+
+	<div class="col-md-3">
+		<!-- hotel section -->
+		<div id="hotels">
+			<h2>Hotels</h2>
+				<select>
+					{% for hotel in all_hotels %}
+					  <option value="{{ hotel.name }}">{{ hotel.name }}</option>
+					{% endfor %}
+				</select>
+				<button type="button" class="btn btn-danger">x</button>
+				<h2>Restaurants</h2>
+				<select>
+					{% for restaurant in all_restaurants %}
+					  <option value="{{ restaurant.name }}">{{ restaurant.name }}</option>
+					{% endfor %}
+				</select>
+				<button type="button" class="btn btn-danger">x</button>
+				<h2>Things To Do</h2>
+				<select>
+					{% for thingtodo in all_things_to_do %}
+					  <option value="{{ thingtodo.name }}">{{ thingtodo.name }}</option>
+					{% endfor %}
+				</select>
+				<button type="button" class="btn btn-danger">x</button>
+		</div>
+
+			<!-- day planner section -->
+		<div id="day-planner">
+			<h2>Day</h2>
+			<button type="button" class="btn btn-primary">1</button>
+			<button type="button" class="btn btn-primary">2</button>
+			<button type="button" class="btn btn-primary">3</button>
+			<button type="button" class="btn btn-primary">+</button>
+
+			<h3>My Hotel</h3>
+			<ul>
+				<li>Hotel <button type="button" class="btn btn-danger">x</button></li>
+			</ul>
+			<h3>My Restaurants</h3>
+			<ul>
+				<li>Restaurants <button type="button" class="btn btn-danger">x</button></li>
+			</ul>
+			<h3>My Things To Do</h3>
+			<ul>
+				<li>Todos <button type="button" class="btn btn-danger">x</button></li>
+			</ul>
+		</div>	
+	</div> <!-- closes column -->
+</div> <!-- closes row -->
+
+<!-- <h1>Trip Planner Hell</h1>
+
 <h2>Hotels</h2>
 <select>
 	{% for hotel in all_hotels %}
@@ -23,5 +86,6 @@
 	{% for thingtodo in all_things_to_do %}
 	  <option value="{{ thingtodo.name }}">{{ thingtodo.name }}</option>
 	{% endfor %}
-</select>
-</body>
+</select> -->
+
+{% endblock %}

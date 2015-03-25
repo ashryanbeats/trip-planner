@@ -16,8 +16,8 @@ app.listen(3000, function (err) { console.log('currently listening...'); });
 
 // view engine setup
 app.engine('html', swig.renderFile);
-app.set('views', path.join(__dirname, 'public/views'));
 app.set('view engine', 'html');
+app.set('views', path.join(__dirname, 'public/views'));
 
 // setup middleware
 
@@ -32,6 +32,7 @@ app.use(
   })
 );
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'bower_components')));
 app.use('/', routes);
 
 

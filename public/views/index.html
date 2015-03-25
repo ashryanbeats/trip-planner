@@ -2,7 +2,26 @@
 <!doctype html>
 <head>
 <link href='/stylesheets/style.css' rel="stylesheet">
+<script src='/jquery/dist/jquery.js'></script>
 </head>
 <body>
-<h1>hi</h1>	
+<h1>Trip Planner Hell</h1>	
+<h2>Hotels</h2>
+<select>
+	{% for hotel in all_hotels %}
+	  <option value="{{ hotel.name }}">{{ hotel.name }}</option>
+	{% endfor %}
+</select>
+<h2>Restaurants</h2>
+<select>
+	{% for restaurant in all_restaurants %}
+	  <option value="{{ restaurant.name }}">{{ restaurant.name }}</option>
+	{% endfor %}
+</select>
+<h2>Things To Do</h2>
+<select>
+	{% for thingtodo in all_things_to_do %}
+	  <option value="{{ thingtodo.name }}">{{ thingtodo.name }}</option>
+	{% endfor %}
+</select>
 </body>

@@ -1,11 +1,74 @@
 function initialize_gmaps() {
+    // create styles. Styled Map Wizard: http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html
+    var styles = [
+      {
+        "featureType": "water",
+        "stylers": [
+          { "color": "#0b014d" }
+        ]
+      },{
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+          { "color": "#ffffff" }
+        ]
+      },{
+        "featureType": "landscape",
+        "stylers": [
+          { "color": "#ea8080" }
+        ]
+      },{
+        "elementType": "labels",
+        "stylers": [
+          { "weight": 0.1 },
+          { "color": "#000000" },
+          { "visibility": "off" }
+        ]
+      },{
+        "featureType": "transit",
+        "stylers": [
+          { "visibility": "off" }
+        ]
+      },{
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": [
+          { "visibility": "off" }
+        ]
+      },{
+        "featureType": "administrative",
+        "elementType": "geometry",
+        "stylers": [
+          { "visibility": "off" }
+        ]
+      },{
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+          { "visibility": "off" }
+        ]
+      },{
+        "featureType": "poi.park",
+        "stylers": [
+          { "visibility": "on" }
+        ]
+      },{
+        "featureType": "poi.park",
+        "elementType": "labels",
+        "stylers": [
+          { "visibility": "off" }
+        ]
+      }
+    ];
+
     // initialize new google maps LatLng object
-    var myLatlng = new google.maps.LatLng(40.705189,-74.009209);
+    var myLatlng = new google.maps.LatLng(40.704989,-74.009609);
     // set the map options hash
     var mapOptions = {
         center: myLatlng,
         zoom: 16,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
+        styles: styles
     };
     // get the maps div's HTML obj
     var map_canvas_obj = document.getElementById("map");

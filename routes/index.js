@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var path = require('path');
+var models = require('../models');
 
 router.get('/', function (req, res, next) {
   

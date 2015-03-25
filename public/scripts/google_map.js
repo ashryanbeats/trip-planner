@@ -61,6 +61,14 @@ function initialize_gmaps() {
       }
     ];
 
+    // icons
+    var pin = {
+        url: "icons/maps.png",
+        scaledSize: new google.maps.Size(40, 50),
+        //origin: new google.maps.Point(0, 0),
+        //anchor: new google.maps.Point(0, 0)
+    };
+
     // initialize new google maps LatLng object
     var myLatlng = new google.maps.LatLng(40.704989,-74.009609);
     // set the map options hash
@@ -77,7 +85,8 @@ function initialize_gmaps() {
     // Add the marker to the map
     var marker = new google.maps.Marker({
         position: myLatlng,
-        title:"Hello World!"
+        title:"Hello World!",
+        icon: pin
     });
     // Add the marker to the map by calling setMap()
     marker.setMap(map);
